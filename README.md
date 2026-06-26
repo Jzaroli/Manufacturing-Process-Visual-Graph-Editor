@@ -62,8 +62,12 @@ const initialEdges = [
   { id: 'e11-12', source: '11', target: '12', label: '7 days' }
 ];
 ```
+### 3. Node Editing & Dependency Validation
+- **Inline Editing**: Double-clicking a node or using an explicit "Edit" button must expose form inputs to modify `ATP` (Available to Promise) and `Gross_requ` (Gross Requirement) directly in the UI.
+- **Dependency Rule**: A node is considered to have an "unmet dependency" if its `Gross_requ` is greater than the total `ATP` supplied by its immediate parent/upstream nodes.
+- **Visual Alert**: Run a validation sweep on data change. Any node with an unmet dependency must dynamically render a thick red outline (`border-4 border-red-500`).
 
-### 3. Footer Component
+### 4. Footer Component
 - Anchor neatly to the bottom of the visible viewport layout.
 - Text content string: "Created by Johann Zaroli; [Github](https://github.com)" (Format the link as an anchor placeholder).
 
