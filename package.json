@@ -6,13 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "start": "serve -s dist -l ${PORT:-10000}",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@xyflow/react": "^12.6.4",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "serve": "^14.2.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
